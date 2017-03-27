@@ -1,0 +1,53 @@
+.header{
+	background-image: linear-gradient(to right, rgba(9,5,47, 0.8), rgba(49,29,94, 0.8) 100%);
+	>.wrapper-mini{
+		display: flex;
+		justify-content: space-between;
+		opacity: 0.85;
+		overflow: hidden;
+		.logo{
+			.icon-logo:before{
+				color: red;
+				font-size: 128px;
+				line-height: 90px;
+				background: linear-gradient(to right, #00e0d0 0%, #4aa3cc 100%);  /* подробнее про градиенты */ 
+  			-webkit-background-clip: text;  /* подробнее про background-clip */ 
+  			color: transparent;
+  			padding-left: 5px; 
+			}
+			
+		}
+	}
+	.menu{
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: 705px) {
+    display: none;
+   }
+		ul{
+			display: flex;
+			justify-content: space-between;
+			margin: 0;
+			padding: 0;
+			align-items: center;
+		}	
+			li{
+				// align-items: center;
+				list-style: none;
+				
+				padding: 10px 0;
+				a{
+					color: #ffffff;
+					text-decoration: none;
+					font-family: Roboto;
+					font-size: 13px;
+					font-weight: 900;
+					text-transform: uppercase;
+					padding: 10px;
+				}
+				&:hover a{
+					color: $main-color;
+				}				
+			}
+		}
+}

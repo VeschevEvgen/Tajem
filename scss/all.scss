@@ -1,0 +1,65 @@
+@import "variables.scss";
+// .wrapper>*>*>*{
+// 	box-sizing: border-box;
+// 	border:$x solid red;
+// }
+// .wrapper>*>*>*>*{
+// 	box-sizing: border-box;
+// 	border:$x solid yellow;
+// }
+// .wrapper>*>*>*>*>*{
+// 	box-sizing: border-box;
+// 	border:$x solid green;
+// }
+// .wrapper>*>*>*>*>*>*{
+// 	box-sizing: border-box;
+// 	border:$x solid yellowgreen;
+// }
+// .wrapper>*>*>*>*>*>*>*{
+// 	box-sizing: border-box;
+// 	border:$x solid tomato;
+// 	box-sizing: border-box;
+// }
+
+@import "mixins.scss";
+@import "components.scss";
+@import "main.scss";
+@import "components/type.scss";
+@import "components/button.scss";
+@import "components/form.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/main.scss";
+body{
+	margin: 0;
+}
+@import "main.scss";
+@import "components/button.scss";
+.wrapper{
+	margin: 0 auto;
+	max-width: 1600px;
+	background-position: bottom;
+	
+	&-bg1{
+		@include background("../img/bg1.jpg");
+	}
+
+	&-bg2{
+		@include background("../img/bg2.jpg");
+	}
+
+	&-bg3{
+		@include background("../img/bg-3.jpg");
+	}
+
+	&-bg4{
+		@include background("../img/bg4.jpg");
+	}
+
+
+	&-mini{
+		margin: 0 auto;
+		max-width: 940px;
+
+	}
+}

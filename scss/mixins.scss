@@ -1,0 +1,13 @@
+@mixin background($url-background){
+	background-image: url($url-background);
+	background-color: #cecccf;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+@mixin gradient(){
+	font-size: 50px;
+	background: linear-gradient(to right, #00e0d0 0%, #4aa3cc 100%);  /* подробнее про градиенты */ 
+  -webkit-background-clip: text;  /* подробнее про background-clip */ 
+  color: transparent;
+}
