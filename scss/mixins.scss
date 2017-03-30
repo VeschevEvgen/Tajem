@@ -2,12 +2,30 @@
 	background-image: url($url-background);
 	background-color: #cecccf;
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 @mixin gradient(){
 	font-size: 50px;
-	background: linear-gradient(to right, #00e0d0 0%, #4aa3cc 100%);  /* подробнее про градиенты */ 
+	background: $main-icon-gradient;  /* подробнее про градиенты */ 
   -webkit-background-clip: text;  /* подробнее про background-clip */ 
   color: transparent;
+}
+
+@mixin flex-row($justify-content: flex-start, $align-items: flex-start){
+	display: flex;
+	justify-content: $justify-content;
+	box-sizing: border-box;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: $align-items; 
+}
+@mixin flex-col($justify-content: flex-start, $align-items: flex-start){
+	display: flex;
+	justify-content: $justify-content;
+	box-sizing: border-box;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: $align-items; 
 }

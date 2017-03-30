@@ -1,16 +1,14 @@
 .header{
-	background-image: linear-gradient(to right, rgba(9,5,47, 0.8), rgba(49,29,94, 0.8) 100%);
+	background: $main-bg-gradient;
 	>.wrapper-mini{
-		display: flex;
-		justify-content: space-between;
+		@include flex-row(space-between, center);
 		opacity: 0.85;
 		overflow: hidden;
 		.logo{
 			.icon-logo:before{
-				color: red;
 				font-size: 128px;
 				line-height: 90px;
-				background: linear-gradient(to right, #00e0d0 0%, #4aa3cc 100%);  /* подробнее про градиенты */ 
+				background: $main-icon-gradient;  /* подробнее про градиенты */ 
   			-webkit-background-clip: text;  /* подробнее про background-clip */ 
   			color: transparent;
   			padding-left: 5px; 
@@ -19,14 +17,12 @@
 		}
 	}
 	.menu{
-		display: flex;
-		align-items: center;
+		@include flex-row(space-between, center);
 		@media screen and (max-width: 705px) {
     display: none;
    }
 		ul{
-			display: flex;
-			justify-content: space-between;
+			@include flex-row(space-between, center);
 			margin: 0;
 			padding: 0;
 			align-items: center;
@@ -37,7 +33,7 @@
 				
 				padding: 10px 0;
 				a{
-					color: #ffffff;
+					color: $inverse-color;
 					text-decoration: none;
 					font-family: Roboto;
 					font-size: 13px;

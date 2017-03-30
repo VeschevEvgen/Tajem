@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon-tajem';
-  src:  url('fonts/icomoon-tajem.eot?psqfao');
-  src:  url('fonts/icomoon-tajem.eot?psqfao#iefix') format('embedded-opentype'),
-    url('fonts/icomoon-tajem.ttf?psqfao') format('truetype'),
-    url('fonts/icomoon-tajem.woff?psqfao') format('woff'),
-    url('fonts/icomoon-tajem.svg?psqfao#icomoon-tajem') format('svg');
+  src:  url('fonts/icomoon-tajem.eot?dzorz');
+  src:  url('fonts/icomoon-tajem.eot?dzorz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-tajem.ttf?dzorz') format('truetype'),
+    url('fonts/icomoon-tajem.woff?dzorz') format('woff'),
+    url('fonts/icomoon-tajem.svg?dzorz#icomoon-tajem') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gucci:before {
+  content: "\e91c";
+}
 .icon-active-dot:before {
   content: "\e900";
 }
@@ -60,55 +63,52 @@
 .icon-google:before {
   content: "\e90b";
 }
-.icon-gucci:before {
+.icon-instagramm:before {
   content: "\e90c";
 }
-.icon-instagramm:before {
+.icon-levis:before {
   content: "\e90d";
 }
-.icon-levis:before {
+.icon-like:before {
   content: "\e90e";
 }
-.icon-like:before {
+.icon-logo:before {
   content: "\e90f";
 }
-.icon-logo:before {
+.icon-mango:before {
   content: "\e910";
 }
-.icon-mango:before {
+.icon-map:before {
   content: "\e911";
 }
-.icon-map:before {
+.icon-mobile:before {
   content: "\e912";
 }
-.icon-mobile:before {
+.icon-monitor:before {
   content: "\e913";
 }
-.icon-monitor:before {
+.icon-nike:before {
   content: "\e914";
 }
-.icon-nike:before {
+.icon-old-phone:before {
   content: "\e915";
 }
-.icon-old-phone:before {
+.icon-paper:before {
   content: "\e916";
 }
-.icon-paper:before {
+.icon-play:before {
   content: "\e917";
 }
-.icon-play:before {
+.icon-puma:before {
   content: "\e918";
 }
-.icon-puma:before {
+.icon-tvetter:before {
   content: "\e919";
 }
-.icon-tvetter:before {
+.icon-ytube:before {
   content: "\e91a";
 }
-.icon-ytube:before {
-  content: "\e91b";
-}
 .icon-zara:before {
-  content: "\e91c";
+  content: "\e91b";
 }
 

@@ -4,11 +4,11 @@
 		margin: 20px 0;
 	}
 .galary-holder{
-	background: linear-gradient(to right, rgba(9,5,47, 0.8), rgba(49,29,94, 0.8) 100%);
+	background: $main-bg-gradient;
 	width: 100%;
 	height: 550px;
 	.h1{
-		color: #ffffff;
+		color: $inverse-color;
 		font-family: "Playfair Display";
 		font-size: 32px;
 		font-weight: 900;
@@ -16,7 +16,7 @@
 	}
 	
 	.p{
-		color: #ffffff;
+		color: $inverse-color;
 		font-family: Roboto;
 		font-size: 14px;
 		font-weight: 300;
@@ -25,10 +25,7 @@
 		text-align: center;
 	}
 	.slide-wripper{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		@include flex-col(space-between, center);
 		padding-top: 40px;
 		padding-bottom: 10%;
 		padding-left: 10px;
@@ -51,8 +48,8 @@
 	&.slick-active button:before
 	{
     content: '\e900';
-    color: #00e0d0;
-    -webkit-text-stroke: 1px #00e0d0;
+    color: $main-color;
+    -webkit-text-stroke: 1px $main-color;
 	}
 }
 .slick-prev,
@@ -64,25 +61,20 @@
 .ourStory{
 	display: flex;
 	justify-content: space-between;
-	margin: 3%;
+	margin: 1%;
 	@media screen and (max-width: 705px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
    }
 	.img-holder{
-		display: flex;
 		margin: 5%;
-		width: 50%;
-		align-items: center;
-		justify-content: space-around;
-		
-
+		@include flex-row(center, center);
 		img{
-			width: 100%;
 		}
 	}
 	.story-card{
+		@include flex-col(space-between, flex-start);
 		margin-left: 5px;
 	}
 	.H2{
@@ -110,21 +102,16 @@
 }
 .video{
 	height: 550px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	@include flex-row(center, center);
 		.play{
 			width: 100px;
 			height: 100px;
-			border: 3px solid #ffffff;
+			border: 3px solid $inverse-color;
 			border-radius:50%;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-
+			@include flex-row(center, center);
 		}
 		.icon-play:before{
-			color:white;
+			color: $inverse-color;
 			font-size: 50px;
 			margin-left: 10px;
 		}
@@ -132,16 +119,9 @@
 }
 
 .expertise {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
+	@include flex-col(center, center);
 	.title{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		@include flex-col(center, center);
 		margin-top: 72px;
 		.h1{
 			color: #413d4b;
@@ -162,23 +142,15 @@
 		}
 	}
 	.card-holder{
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
-		flex-wrap: wrap;
-		width: 100%;
+		@include flex-row(space-between);
 		overflow: hidden;
 		margin-bottom: 20px;
 		.expert-card{
-			box-sizing: border-box;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
+			@include flex-col(center, center);
 			width: 33.33%;
-			align-items: center;
 			border-right: 1px solid #ebebeb;
 			border-bottom: 1px solid #ebebeb;
-			margin: -2px;
+			margin: -3px;
 			padding: 5px;
 			margin-left: 2px;
 			@media screen and (max-width: 705px) {
@@ -228,29 +200,23 @@
 
 	}
 	.expertise {
-		box-sizing: border-box;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		margin-bottom: 30px;
+		@include flex-col(center, center);
+		padding: 5px;
 	.title{
 		margin-top: 20px;
 		.h1{
-			color: #fff;
+			color: $inverse-color;
 		}
 		.p{
-			color: #fff;
+			color: $inverse-color;
 		}
 		>.line{
-			border-top: 1px solid #fff;
+			border-top: 1px solid $inverse-color;
 		}
 	}	
 	}
 	.meet-card{
-			box-sizing: border-box;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
+			@include flex-col(center, center);
 			width: 23%;
 			align-items: center;
 			border: 1px solid #797590;
@@ -259,7 +225,7 @@
 		    width: 46%;
 		  }
 		  .h2{
-		  	color: #ffffff;
+		  	color: $inverse-color;
 				font-family: Roboto;
 				font-size: 14px;
 				font-weight: 900;
@@ -285,31 +251,59 @@
 	}
 
 }
+.works{
+	@include flex-col(center, center);
 
+	&-header{
+		@include flex-row(space-between, center);
+		width: 100%;
+		height: 16.7vw;
+		max-height: 157px;
+		.h1{
+			color: #413d4b;
+			font-family: "Playfair Display";
+			font-size: 22px;
+			font-weight: 700;
+			text-transform: uppercase;
 
+		}
+		a{
+			color: #413d4b;
+			font-family: Roboto;
+			font-size: 14px;
+			font-weight: 300;
+			text-decoration: none;
+		}
+	}
+	&-card-holder{
+		@include flex-row(space-between, center);
+		
+		width: 100%;
+		padding: 0;
+		
+	}
+	.card-holder{
+		width: 16.66%;
+		@media screen and (max-width: 705px) {
+		    width: 33.33%;
+		  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		img{
+			display: block;
+			margin: 0;
+			padding: 0;
+			margin-bottom: -4px;
+			margin-left: -2px;
+			width: 100%;
+		}
+	}
+	.btn{
+		width: 140px;
+		margin-top: 70px;
+		margin-bottom: 70px;
+		text-align: center;
+	}
+}
 
 .quote{
 	height: 500px;
@@ -317,14 +311,10 @@
 	box-sizing: border-box;
 
 .img-holder{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		// padding-top: 70px;
+		@include flex-col(center, center);
 }
 .name{
-	color: #ffffff;
+	color: $inverse-color;
 	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 900;
@@ -333,7 +323,7 @@
 }
 .prof{
 	opacity: 0.7;
-	color: #ffffff;
+	color: $inverse-color;
 	font-family: Roboto;
 	font-size: 13px;
 	font-weight: 300;
@@ -341,3 +331,65 @@
 	text-transform: uppercase;
 }
 }
+
+.form-client{
+	@include flex-row(space-between, flex-start);
+	margin-bottom: 70px;
+	.form-holder{
+		width: 47%;
+		@media screen and (max-width: 705px) {
+		    width: 100%;
+				padding-right: 10px;
+		  }
+		padding-left: 10px;
+		@include flex-row(space-between, flex-start);
+
+		textarea{
+			min-height: 200px;
+
+		}
+
+	}
+	.client-holder{
+		width: 47%;
+		margin-bottom: 30px;
+		@include flex-row(space-betwen, flex-start);
+		@media screen and (max-width: 705px) {
+		    width: 100%;
+		  }
+		padding-left: 10px;
+		padding-right: 10px;
+		.h1{
+			margin-bottom: 15px;
+		}
+		.img-holder{
+			width: 50%;
+			&:hover div[class|="icon"]:before{
+					background: $main-icon-gradient;  /* подробнее про градиенты */ 
+  				-webkit-background-clip: text;  /* подробнее про background-clip */ 
+  				color: transparent;
+				}
+		  }
+			div[class|="icon"]{
+				font-size: 150px;
+				line-height: 63px;
+				margin-bottom: 33px;
+				.imgholder:hover div[class|="icon"]:before{
+					background: $main-icon-gradient;  /* подробнее про градиенты */ 
+  				-webkit-background-clip: text;  /* подробнее про background-clip */ 
+  				color: transparent;
+				}
+			}
+		}
+	.h1{
+				color: #413d4b;
+				font-family: "Playfair Display";
+				font-size: 22px;
+				font-weight: 700;
+				text-transform: uppercase;
+				width: 100%;
+				margin-top: 72px;
+				margin-bottom: 35px;
+
+			}
+	}

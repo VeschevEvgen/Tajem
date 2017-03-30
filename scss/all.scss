@@ -1,26 +1,5 @@
 @import "variables.scss";
-// .wrapper>*>*>*{
-// 	box-sizing: border-box;
-// 	border:$x solid red;
-// }
-// .wrapper>*>*>*>*{
-// 	box-sizing: border-box;
-// 	border:$x solid yellow;
-// }
-// .wrapper>*>*>*>*>*{
-// 	box-sizing: border-box;
-// 	border:$x solid green;
-// }
-// .wrapper>*>*>*>*>*>*{
-// 	box-sizing: border-box;
-// 	border:$x solid yellowgreen;
-// }
-// .wrapper>*>*>*>*>*>*>*{
-// 	box-sizing: border-box;
-// 	border:$x solid tomato;
-// 	box-sizing: border-box;
-// }
-
+@import "border.scss";
 @import "mixins.scss";
 @import "components.scss";
 @import "main.scss";
@@ -30,11 +9,19 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 @import "layout/main.scss";
-body{
-	margin: 0;
-}
 @import "main.scss";
 @import "components/button.scss";
+body{
+	margin: 0;
+	
+}
+.wrapper>*>*>*,
+.wrapper>*>*>*>*,
+.wrapper>*>*>*>*>*,
+.wrapper>*>*>*>*>*>*,
+.wrapper>*>*>*>*>*>*>*{
+	box-sizing: border-box;
+}
 .wrapper{
 	margin: 0 auto;
 	max-width: 1600px;
@@ -55,11 +42,32 @@ body{
 	&-bg4{
 		@include background("../img/bg4.jpg");
 	}
-
+	&-bg-footer{
+		@include background("../img/bg-footer.jpg");
+	}
+	input, textarea{
+			width: 100%;
+			line-height: 45px;
+			color: #413d4b;
+			font-family: Roboto;
+			font-size: 14px;
+			font-weight: 300;
+			margin-bottom: 21px;
+		}
+	.h2{
+		  	color: $inverse-color;
+				font-family: Roboto;
+				font-size: 14px;
+				font-weight: 900;
+				text-transform: uppercase;
+				margin: 10px;
+				text-align: center;
+		  }
 
 	&-mini{
 		margin: 0 auto;
 		max-width: 940px;
-
-	}
+		padding-left: 10px;
+		padding-right: 10px;
+	}	
 }
